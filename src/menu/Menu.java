@@ -56,7 +56,7 @@ public class Menu {
 
         } catch (InputMismatchException e) {
             System.out.println("El rut está incompleto o no cumple con el formato solicitado");
-        } catch (NumberFormatException e ){
+        } catch (NumberFormatException  |  StringIndexOutOfBoundsException e ){
             System.out.println("Error, no ingresaste un RUT");
         }
         return validacion;
@@ -114,7 +114,7 @@ public class Menu {
     public int mostrarMenu() {
         String separador = "*******************************************";
         System.out.println(separador);
-        System.out.println("* Bienvenido, por favor ingrese su opción: *");
+        System.out.println("* Bienvenido, por favor ingrese su opción *");
         System.out.println(separador);
         System.out.println("1. Ingresar Colaborador");
         System.out.println("2. Ver Colaborador");
